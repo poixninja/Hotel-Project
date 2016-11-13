@@ -37,12 +37,12 @@ public class HotelGUI {
 	private JLabel lblExtraCharges;
 	private JLabel lblPonyRide;
 	private JLabel lblSkyDive;
-	private JLabel lblRoomServide;
+	private JLabel lblRoomService;
 	private JTextField textField_15;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
 	private JLabel label;
-	private JLabel lblRoomService;
+	private JLabel lblRoomServ;
 	private JButton btnAdd;
 	private JButton btnUpdate;
 	private JTextField textField_16;
@@ -86,7 +86,7 @@ public class HotelGUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Select");
+		JButton btnNewButton = new JButton("Refresh");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -231,8 +231,8 @@ public class HotelGUI {
 		lblSkyDive.setBounds(113, 320, 58, 14);
 		frame.getContentPane().add(lblSkyDive);
 		
-		lblRoomServide = new JLabel("Room Serv.");
-		lblRoomServide.setBounds(213, 259, 75, 14);
+		lblRoomService = new JLabel("Room Serv.");
+		lblRoomService.setBounds(213, 259, 75, 14);
 		frame.getContentPane().add(lblRoomService);
 		
 		textField_15 = new JTextField();
@@ -252,9 +252,9 @@ public class HotelGUI {
 		label.setBounds(213, 187, 46, 14);
 		frame.getContentPane().add(label);
 		
-		lblRoomService = new JLabel("Room Serv.");
-		lblRoomService.setBounds(213, 320, 65, 14);
-		frame.getContentPane().add(lblRoomService);
+		lblRoomServ = new JLabel("Room Serv.");
+		lblRoomServ.setBounds(213, 320, 65, 14);
+		frame.getContentPane().add(lblRoomServ);
 		
 		btnAdd = new JButton("Add");
 		btnAdd.setBounds(352, 336, 72, 23);
