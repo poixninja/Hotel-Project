@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JComboBox;
 
-public class HotelGUI {
+public class HotelGUI extends DbConnection {
 
 	private JFrame frame;
-	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
@@ -94,10 +94,16 @@ public class HotelGUI {
 		btnNewButton.setBounds(352, 60, 72, 23);
 		frame.getContentPane().add(btnNewButton);
 		
-		textField = new JTextField();
-		textField.setBounds(10, 61, 86, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(10, 58, 81, 26);
+		frame.getContentPane().add(comboBox);
+		DbConnection ava = new DbConnection();
+		if (ava.refresh(1))
+		comboBox.addItem("Room 1");
+		if (ava.refresh(2))
+		comboBox.addItem("Room 2");
+		if (ava.refresh(3))
+		comboBox.addItem("Room 3");
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(106, 61, 65, 20);
@@ -185,6 +191,10 @@ public class HotelGUI {
 		frame.getContentPane().add(lblZipCode);
 		
 		btnBook = new JButton("Check In");
+		btnBook.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnBook.setBounds(349, 182, 75, 23);
 		frame.getContentPane().add(btnBook);
 		
